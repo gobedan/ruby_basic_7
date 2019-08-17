@@ -27,7 +27,6 @@ class Train
   end
 
   def route=(route)
-      #уберем поезд со станции если переназначили маршрут 
     current_station.depart_train(self) if self.route
     @route = route
     self.current_station_index = 0 
@@ -47,7 +46,6 @@ class Train
   end
 
   def prev_station
-    #[current_station_index - 1] распознает как обращение как геттеру с аргументом ArgumentError
     route.route_list[current_station_index + -1] if route && current_station_index > 0
   end
 
@@ -85,7 +83,6 @@ class Train
     raise "invalid train id!" unless id =~ VALID_ID
   end
 
-  #или лучше private?
   def go(station)
     if station
       current_station.depart_train(self)

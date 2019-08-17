@@ -10,7 +10,6 @@ class PassengerTrain < Train
   end
 
   private
-  #как вариант приватной константы 
   def valid_type 
     :passenger_carriage 
   end

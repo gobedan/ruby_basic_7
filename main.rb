@@ -134,7 +134,6 @@ class MainMenu
 
   def configure_train
     puts "Select train ... "
-    #выходим из метода если список для выбора пуст
     return unless selected_train = train_chooser
     puts "Command list: "
     puts "1. Assign route"
